@@ -1,183 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Teacher's Report Card</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 120vh;
-      background-color: #f4f4f4;
-    }
+    <meta charset="UTF-8">
+    <title>Teacher's Report Card</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 120vh;
+            background-color: #f4f4f4;
+        }
 
-    #submitForm {
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      width: 400px;
-      max-width: 100%;
-      text-align: center;
-    }
+        #submitForm {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            max-width: 100%;
+            text-align: center;
+        }
 
-    .form-group {
-      margin-bottom: 15px;
-      text-align: left;
-    }
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
 
-    label {
-      display: block;
-      margin-bottom: 5px;
-      font-weight: bold;
-    }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
 
-    input[type="text"],
-    textarea {
-      width: calc(100% - 12px);
-      padding: 8px;
-      border-radius: 4px;
-      border: 1px solid #ccc;
-      transition: border-color 0.3s ease-in-out;
-    }
+        input[type="text"], textarea {
+            width: calc(100% - 12px);
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            transition: border-color 0.3s ease-in-out;
+        }
 
-    input[type="text"]:focus,
-    textarea:focus {
-      outline: none;
-      border-color: #007bff;
-    }
+        input[type="text"]:focus, textarea:focus {
+            outline: none;
+            border-color: #007bff;
+        }
 
-    textarea {
-      resize: vertical;
-      height: 60px;
-      max-height: 200px;
-    }
+        textarea {
+            resize: vertical;
+            height: 60px;
+            max-height: 200px;
+        }
 
-    button {
-      padding: 10px 20px;
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background-color 0.3s ease-in-out;
-    }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
 
-    button:hover {
-      background-color: #0056b3;
-    }
+        button:hover {
+            background-color: #0056b3;
+        }
 
-    #thanksMessage {
-      display: none;
-      text-align: center;
-    }
-  </style>
-  <script type="module">
-    // Import Firebase modules
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-    import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
-    
-    // Your Firebase config here
-    const firebaseConfig = {
-      apiKey: "AIzaSyDtYI5cQ9__anMVPpKslRtw3ssMD3reLOw",
-      authDomain: "fir-api-test-176c0.firebaseapp.com",
-      projectId: "fir-api-test-176c0",
-      databaseURL: "https://fir-api-test-176c0-default-rtdb.firebaseio.com",
-      storageBucket: "fir-api-test-176c0.appspot.com",
-      messagingSenderId: "391943424715",
-      appId: "1:391943424715:web:a6f02765faf4180da4e94e",
-      measurementId: "G-H196EQ1351"
-    };
-
-    // Initialize Firebase app
-    const app = initializeApp(firebaseConfig);
-
-    // Initialize Realtime Database and get a reference to the service
-    const database = getDatabase(app);
-
-    document.addEventListener('DOMContentLoaded', () => {
-      const submitButton = document.getElementById('submitButton');
-      submitButton.addEventListener('click', submitForm);
-      document.getElementById("lab3").style.visibility = "hidden";
-    });
-
-    function submitForm() {
-      const name = document.getElementById('name').value.trim();
-      const stars = document.getElementById('stars').value.trim();
-      const wishes = document.getElementById('wishes').value.trim();
-      //const studentId = document.getElementById('studentId').value.trim();
-      //const githubLink = document.getElementById('githubLink').value.trim();
-      const others = document.getElementById('others').value.trim();
-
-      //if (name && studentId && githubLink && introduction) {
-     if (name || stars || wishes) {
-        const dataRef = ref(database, 'submittedData');
-        push(dataRef, {
-          name,
-          stars,
-          wishes,
-          others
-        }).then(() => {
-          hideForm();
-        }).catch(error => {
-          console.error('Error saving data: ', error);
+        #thanksMessage {
+            display: none;
+            text-align: center;
+        }
+    </style>
+    <script type="module">
+        const databaseUrl = 'https://fir-api-test-176c0-default-rtdb.firebaseio.com/reportMsg.json';
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('#submitButton').onclick = submitForm;
         });
-      } else {
-        alert('Please fill in all fields.');
-      }
-    }
+        
+        async function submitForm() {
+            const name = document.getElementById('name').value.trim();
+            const stars = document.getElementById('stars').value.trim();
+            const wishes = document.getElementById('wishes').value.trim();
+            const others = document.getElementById('others').value.trim();
 
-    function hideForm() {
-      const submitForm = document.getElementById('submitForm');
-      const thanksMessage = document.getElementById('thanksMessage');
+            if (name || stars || wishes || others) {
+                const timestamp = new Date();
+                const data = {name, stars, wishes, others, timestamp};//
 
-      submitForm.style.display = 'none';
-      thanksMessage.style.display = 'block';
-    }
-  </script>
+                try {
+                    const response = await fetch(databaseUrl, {
+                        method: 'POST',
+                        headers: {
+                        'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(data)
+                    });
+
+                    if (!response.ok) {
+                        throw new Error('Failed to send message');
+                    }
+                    hideForm();
+                } catch (error) {
+                    console.error('Error sending message:', error);
+                }
+            }
+        }
+/*
+        function submitForm() {
+            const name = document.getElementById('name').value.trim();
+            const stars = document.getElementById('stars').value.trim();
+            const wishes = document.getElementById('wishes').value.trim();
+            const others = document.getElementById('others').value.trim();
+
+            if (name || stars || wishes) {
+                const timestamp = new Date();
+                const data = {name, stars, wishes, others, timestamp};//
+                fetch(databaseUrl, {
+                        method: 'POST',
+                        headers: {
+                        'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(data)
+                })
+                //.then(response => response.json()) // unnecessary
+                .then(() => {
+                    hideForm();
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            } else {
+                alert('Please fill in all fields.');
+            }
+        }
+*/
+        function hideForm() {
+            const submitForm = document.getElementById('submitForm');
+            const thanksMessage = document.getElementById('thanksMessage');
+
+            submitForm.style.display = 'none';
+            thanksMessage.style.display = 'block';
+        }
+    </script>
 </head>
 <body>
-  <div id="submitForm">
-    <h1>Teacher's Report Card</h1>
-    <h3>I am a learner first, a teacher second.</h3>
-    <div class="form-group">
-      <label for="name">Name (Optional):</label>
-      <input type="text" id="name" placeholder="Enter your name">
+    <div id="submitForm">
+        <h1>Teacher's Report Card</h1>
+        <h3>I am a learner first, a teacher second.</h3>
+        <div class="form-group">
+            <label for="name">Name (Optional):</label>
+            <input type="text" id="name" placeholder="Enter your name">
+        </div>
+        <div class="form-group">
+            <label for="stars">What have I done well as a teacher:</label>
+            <textarea id="stars" rows="3" maxlength="500" placeholder="Stars"></textarea>
+          </div>
+          <div class="form-group">
+              <label for="wishes">How can I get better being a teacher:</label>
+              <textarea id="wishes" rows="3" maxlength="500" placeholder="Wishes"></textarea>
+          </div>
+          <div class="form-group">
+              <label for="others">Anything else you want to tell me (Optional):</label>
+              <textarea id="others" rows="3" maxlength="500" placeholder="Other comments"></textarea>
+          </div>
+          <button id="submitButton">Submit</button>
     </div>
-    <!--
-    <div class="form-group">
-      <label for="studentId">Student ID:</label>
-      <input type="text" id="studentId" placeholder="Enter your student ID">
+      
+    <div id="thanksMessage">
+        <h1>Thanks for submitting. Have fun with your learning!</h1>
     </div>
-    
-    <div class="form-group">
-      <label for="githubLink">This Week's Lab GitHub Link:</label>
-      <input type="text" id="githubLink" placeholder="Enter your link">
-    </div>
-    -->
-    <div class="form-group">
-      <label for="stars">What have I done well as a teacher:</label>
-      <textarea id="stars" rows="3" maxlength="500" placeholder="Stars"></textarea>
-    </div>
-    <div class="form-group">
-        <label for="wishes">How can I get better being a teacher:</label>
-        <textarea id="wishes" rows="3" maxlength="500" placeholder="Wishes"></textarea>
-    </div>
-    <div class="form-group">
-        <label for="others">Anything else you want to tell me (Optional):</label>
-        <textarea id="others" rows="3" maxlength="500" placeholder="Other comments"></textarea>
-    </div>
-    <button id="submitButton">Submit</button>
-  </div>
-
-  <div id="thanksMessage">
-    <h1>Thanks for submitting. Have fun with your learning!</h1>
-  </div>
-
-  <p id="lab3"><a href="lab3_demo.html">lab3</a></p>
 </body>
 </html>
