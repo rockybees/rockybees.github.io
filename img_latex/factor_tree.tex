@@ -1,0 +1,74 @@
+\documentclass{article}
+\usepackage{forest}
+
+\begin{document}
+
+\begin{center}
+\begin{forest}
+  for tree={
+    parent anchor=south,
+    child anchor=north,
+    grow=south,
+    s sep=1cm,
+    edge={thick},
+  }
+  [24
+    [2]
+    [12
+      [2]
+      [6
+        [2]
+        [3]
+      ]
+    ]
+  ]
+\end{forest}
+\end{center}
+
+\begin{center}
+\begin{forest}
+  for tree={
+    parent anchor=south,
+    child anchor=north,
+    grow=south,
+    s sep=1cm,
+    edge={thick},
+  }
+  [24
+    [3]
+    [8
+      [2]
+      [4
+        [2]
+        [2]
+      ]
+    ]
+  ]
+\end{forest}
+\end{center}
+
+\begin{center}
+\begin{forest}
+  for tree={
+    parent anchor=south,
+    child anchor=north,
+    grow=south,
+    s sep=1cm,
+    edge={thick},
+  }
+  [24
+    [4
+      [2]
+      [2]
+     ]
+    [6
+      [2]
+      [3
+      ]
+    ]
+  ]
+\end{forest}
+\end{center}
+
+\end{document}
+
