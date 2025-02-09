@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Math10 - 1.2 Greatest Common Factor and Least Common Multiple</title>
+    <style>
+        .responsive-img {
+            width: 50%;
+        }
+        .margin-from-left-solution {
+            margin-left: 20px;
+        }
+        body {
+            margin:4em; 
+            background-color: rgb(249, 249, 249);
+        }
+        #example-container {
+            background-color: rgb(236, 236, 236);
+            border:2px solid rgb(200, 200, 200);
+            padding: 1em;
+        }
+        #rule-container {
+            background-color: rgb(200, 200, 200);
+            border:2px solid rgb(180, 180, 180);
+            padding: 1em;
+        }
+    </style>
+        <!-- KaTeX CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+    
+        <!-- KaTeX JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js"></script>
+    
+        <script>
+            window.onload = function() {
+                renderMathInElement(document.body, {
+                    delimiters: [
+                        {left: "$$", right: "$$", display: true},
+                        {left: "\\[", right: "\\]", display: true},
+                        {left: "$", right: "$", display: false},
+                        {left: "\\(", right: "\\)", display: false}
+                    ]
+                });
+            };
+        </script>
+</head>
+<body>
+    <h1>Factors</h1>
+    <p>An integer $k$ is called a $\textbf{factor}$ (or $\textbf{divisor}$) of an integer $N$ if there exists an interger $n$ such that
+    $N = k \cdot n$. In other words, $k$ is a factor of $N$ if $N$ is divisible by $k$ without leaving a remainder. E.g., 4 is a factor of 24 because $4 \times 6 = 24$. </p>
+    
+    <div id="rule-container">
+        <h2>Divisibility Rules:</h2>
+        <p class="margin-from-left-solution">For $2$: A whole number is divisible by $2$ if its last digit is $0$, $2$, $4$, $6$, or $8$.</p>
+        <p class="margin-from-left-solution">For $3$: A whole number is divisible by $3$ if the sum of its digits is divisible by $3$.</p>
+        <p class="margin-from-left-solution">For $4$: A whole number is divisible by $4$ if the number formed by its last two digits is divisible by $4$.</p>
+        <p class="margin-from-left-solution">For $5$: A whole number is divisible by $5$ if its last digit is $0$ or $5$.</p>
+        <p class="margin-from-left-solution">For $6$: A whole number is divisible by $6$ if it is divisible by $2$ and $3$.</p>
+        <p class="margin-from-left-solution">For $7$: A whole number is divisible by $7$ if doubling its last digit and subtracting it from the rest of the number results in a multiple of $7$.</p>
+        <p class="margin-from-left-solution">For $8$: A whole number is divisible by $8$ if the number formed by its last three digits is divisible by $8$.</p>
+        <p class="margin-from-left-solution">For $9$: A whole number is divisible by $9$ if the sum of its digits is divisible by $9$.</p>
+        <p class="margin-from-left-solution">For $10$: A whole number is divisible by $10$ if its last digit is $0$.</p>
+    </div>
+
+    <div id="rule-container">
+        <h2>One, Prime Numbers and Composite Numbers:</h2>
+    </div>
+    
+    <p>\( \textbf{Whole Numbers} \ \mathbb{W} \):   \( \{0, 1, 2, 3, ...\} \)</p>
+    <p>\( \textbf{Integers} \ \mathbb{Z} \):   \( \{..., -3, -2, -1, 0, 1, 2, 3, ...\} \)</p>
+    <p>\( \textbf{Rational numbers} \) <span style="color:red;">\( \mathbb{Q} \)</span>: All the numbers that can be expressed as <u><u>a fraction of two integers</u></u>, i.e., the <span style="color:red;">q</span>uotient of two integers with a non-zero denominator. E.g., \( -9, -3/2, 0, 1.\overline{78}, 59/33, 2.33, 4. \) In mathematical notation: </p>
+    <p>
+        \[
+        \mathbb{Q} = \left\{ \frac{a}{b} \mid a, b \in \mathbb{Z}, b \neq 0 \right\}
+        \]
+        Here, \( \mathbb{Z} \) represents the set of integers, and \( a \) and \( b \) are integers with \( b \neq 0 \).
+    </p>
+
+    <p>\( \textbf{Irrational numbers} \): All the numbers that cannot be expressed as a fraction of two integers. They have infinite, non-repeating decimal expansions. E.g., \( \sqrt{2}, e, \pi. \)</p>
+    <p>\( \textbf{Real numbers} \ \mathbb{R} \): the union of both rational and irrational numbers. Real numbers can be thought of as all the points on the number line. </p>
+    <img src="img_svg/math10_foundations_of_math_and_preCalculus_Real_number_line.svg" alt="Real_Number_Line" class="responsive-img">
+
+    <hr>
+
+    <div id="example-container">
+        <h2>Example:</h2>
+        <p class="margin-from-left-solution">Given the set \( \{-90, -2.5, 0, 0.\overline{28}, \sqrt{3}, 7/4, \pi, 16 \} \), identify which numbers belong to the following number systems: natural numbers, whole numbers, integers, rational numbers, irrational numbers and real numbers. </p>
+        <hr>
+        <h3>Solution:</h3>
+        <div class="margin-from-left-solution">
+            <p>Natural numbers: 16</p>
+            <p>Whole numbers: 0, 16</p>
+            <p>Integers: -90, 0, 16</p>
+            <p>Rational numbers: -90, -2.5, 0, \( 0.\overline{28} \), 7/4, 16</p>
+            <p>Irrational numbers: \( \sqrt{3} , \pi \)</p>
+            <p>Real numbers: -90, -2.5, 0, \( 0.\overline{28} \), \( \sqrt{3}, 7/4, \pi \), 16</p>
+        </div>
+    </div>
+</body>
+</html>
