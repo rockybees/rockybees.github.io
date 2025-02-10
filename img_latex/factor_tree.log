@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.13)  8 FEB 2025 20:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.13)  10 FEB 2025 12:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -509,36 +509,105 @@ Package: inlinedef 2008/07/10 v1.0 Inlined expansions within definitions
 \forest@externalize@max@outer@n=\count308
 \forest@externalize@inner@n=\count309
 )
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2021/11/30 v1.9d multicolumn formatting (FMi)
+\c@tracingmulticols=\count310
+\mult@box=\box84
+\multicol@leftmargin=\dimen199
+\c@unbalance=\count311
+\c@collectmore=\count312
+\doublecol@number=\count313
+\multicoltolerance=\count314
+\multicolpretolerance=\count315
+\full@width=\dimen256
+\page@free=\dimen257
+\premulticols=\dimen258
+\postmulticols=\dimen259
+\multicolsep=\skip50
+\multicolbaselineskip=\skip51
+\partial@page=\box85
+\last@line=\box86
+\maxbalancingoverflow=\dimen260
+\mult@rightbox=\box87
+\mult@grightbox=\box88
+\mult@firstbox=\box89
+\mult@gfirstbox=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\@tempa=\box99
+\@tempa=\box100
+\@tempa=\box101
+\@tempa=\box102
+\@tempa=\box103
+\@tempa=\box104
+\@tempa=\box105
+\@tempa=\box106
+\@tempa=\box107
+\@tempa=\box108
+\@tempa=\box109
+\@tempa=\box110
+\@tempa=\box111
+\@tempa=\box112
+\@tempa=\box113
+\@tempa=\box114
+\@tempa=\box115
+\@tempa=\box116
+\@tempa=\box117
+\@tempa=\box118
+\@tempa=\box119
+\@tempa=\box120
+\@tempa=\box121
+\@tempa=\box122
+\@tempa=\box123
+\@tempa=\box124
+\@tempa=\box125
+\@tempa=\box126
+\c@minrows=\count316
+\c@columnbadness=\count317
+\c@finalcolumnbadness=\count318
+\last@try=\dimen261
+\multicolovershoot=\dimen262
+\multicolundershoot=\dimen263
+\mult@nat@firstbox=\box127
+\colbreak@box=\box128
+\mc@col@check@num=\count319
+)
 (./factor_tree.aux)
 \openout1 = `factor_tree.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
 
 (/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count310
-\scratchdimen=\dimen199
-\scratchbox=\box84
-\nofMPsegments=\count311
-\nofMParguments=\count312
+\scratchcounter=\count320
+\scratchdimen=\dimen264
+\scratchbox=\box129
+\nofMPsegments=\count321
+\nofMParguments=\count322
 \everyMPshowfont=\toks44
-\MPscratchCnt=\count313
-\MPscratchDim=\dimen256
-\MPnumerator=\count314
-\makeMPintoPDFobject=\count315
+\MPscratchCnt=\count323
+\MPscratchDim=\dimen265
+\MPnumerator=\count324
+\makeMPintoPDFobject=\count325
 \everyMPtoPDFconversion=\toks45
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -549,24 +618,33 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+Overfull \hbox (24.8887pt too wide) in paragraph at lines 75--76
+ [] 
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 79.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 79.
 [1
 
 {/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 (./factor_tree.aux) ) 
 Here is how much of TeX's memory you used:
- 23101 strings out of 476025
- 563003 string characters out of 5790017
- 1860388 words of memory out of 5000000
- 43304 multiletter control sequences out of 15000+600000
+ 23243 strings out of 476025
+ 565450 string characters out of 5790017
+ 1865388 words of memory out of 5000000
+ 43442 multiletter control sequences out of 15000+600000
  512287 words of font info for 32 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 127i,8n,118p,1587b,1337s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 127i,8n,118p,1608b,1420s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr10.pfb>
-Output written on factor_tree.pdf (1 page, 11707 bytes).
+fonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmsy10.pfb>
+Output written on factor_tree.pdf (1 page, 25123 bytes).
 PDF statistics:
- 16 PDF objects out of 1000 (max. 8388607)
- 10 compressed objects within 1 object stream
+ 21 PDF objects out of 1000 (max. 8388607)
+ 13 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

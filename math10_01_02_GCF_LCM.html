@@ -73,8 +73,11 @@
 
 
     <h1>Finding Prime Factors of Composite Numbers</h1>
-    <p>Method 1: Factor Tree</p>
-    <p>Method 2: Continuous Division</p>
+    <h4>Method 1: Factor Tree</h4>
+    <img src="img_latex/10_01_02_factor_tree.png" alt="Factor tree for 24" height="260">
+    <h4>Method 2: Continuous Division</h4>
+    <img src="img_latex/10_01_02_continuous_division_24.png" alt="Continuous division for 24" height="180">
+
 
     <div id="rule-container">
         <h2>Greatest Common Factor (GCF):</h2>
@@ -91,6 +94,35 @@
             <li>Divide the common factor of all the numbers until there is no common factor.</li>
             <li>Multiply these common factors to get the GCF.</li>
         </ol>
+    </div>
+
+    <div id="example-container">
+        <h2>Example 1:</h2>
+        <p class="margin-from-left-solution">Find the GCF of 12 and 16.</p>
+        <hr>
+        <h3>Method 1: Prime Factorization</h3>
+        <div class="margin-from-left-solution">
+            <p>$12 = 2^2 \times 3$</p>
+            <p>$16 = 2^4$</p>
+            <p>Therefore the GCF of $12$ and $16$ is $2^2 = 4$.</p>
+        </div>
+        <h3>Method 2: Continuous Division</h3>
+        <img src="img_latex/10_01_02_GCF_continous_division_12_16.png" alt="Find GCF using continuous division for 12 and 16" height="180">
+    </div>
+
+    <div id="example-container">
+        <h2>Example 2:</h2>
+        <p class="margin-from-left-solution">Find the GCF of 4, 6, and 16.</p>
+        <hr>
+        <h3>Method 1: Prime Factorization</h3>
+        <div class="margin-from-left-solution">
+            <p>$4 = 2^2$</p>
+            <p>$6 = 2 \times 3$</p>
+            <p>$16 = 2^4$</p>
+            <p>Therefore the GCF of $4$, $6$, and $16$ is $2$.</p>
+        </div>
+        <h3>Method 2: Continuous Division</h3>
+        <img src="img_latex/10_01_02_GCF_continous_division_4_6_16.png" alt="Find GCF using continuous division for 12 and 16" height="180">
     </div>
 
 <br>
@@ -110,28 +142,41 @@
         </ol>
         <h4>Method 2: Continuous Division</h4>
         <ol>
-            <li>Divide the common factor of all the numbers or (any two numbers) until no common factor remains.</li>
+            <li>Divide the common factor of all the numbers or (any two numbers) until no common factor remains or all ones.</li>
             <li>Multiply all the factors, including the numbers that could not be divided, to get the LCM.</li>
         </ol>
     </div>
     
-    <img src="img_svg/math10_foundations_of_math_and_preCalculus_Real_number_line.svg" alt="Real_Number_Line" class="responsive-img">
-
     <hr>
 
     <div id="example-container">
-        <h2>Example:</h2>
-        <p class="margin-from-left-solution">Given the set \( \{-90, -2.5, 0, 0.\overline{28}, \sqrt{3}, 7/4, \pi, 16 \} \), identify which numbers belong to the following number systems: natural numbers, whole numbers, integers, rational numbers, irrational numbers and real numbers. </p>
+        <h2>Example 3:</h2>
+        <p class="margin-from-left-solution">Find the LCM of 4, 6, and 16.</p>
         <hr>
-        <h3>Solution:</h3>
+        <h3>Method 1: Prime Factorization</h3>
         <div class="margin-from-left-solution">
-            <p>Natural numbers: 16</p>
-            <p>Whole numbers: 0, 16</p>
-            <p>Integers: -90, 0, 16</p>
-            <p>Rational numbers: -90, -2.5, 0, \( 0.\overline{28} \), 7/4, 16</p>
-            <p>Irrational numbers: \( \sqrt{3} , \pi \)</p>
-            <p>Real numbers: -90, -2.5, 0, \( 0.\overline{28} \), \( \sqrt{3}, 7/4, \pi \), 16</p>
+            <p>$4 = 2^2$</p>
+            <p>$6 = 2 \times 3$</p>
+            <p>$16 = 2^4$</p>
+            <p>Therefore the GCF of $4$, $6$, and $16$ is $2^2 \times 3 \times 4 = 48$.</p>
         </div>
+        <h3>Method 2: Continuous Division</h3>
+        <img src="img_latex/10_01_02_LCM_continous_division_4_6_16.png" alt="Find LCM using continuous division for 4, 6 and 16" height="180">
+    </div>
+
+    <div id="example-container">
+        <h2>Example 4:</h2>
+        <p class="margin-from-left-solution">Find the LCM of 2, 3, and 6.</p>
+        <hr>
+        <h3>Method 1: Prime Factorization</h3>
+        <div class="margin-from-left-solution">
+            <p>$2 = 2$</p>
+            <p>$3 = 3$</p>
+            <p>$6 = 2 \times 3$</p>
+            <p>Therefore the LCM of $2$, $3$, and $6$ is $2 \times 3 = 6$.</p>
+        </div>
+        <h3>Method 2: Continuous Division</h3>
+        <img src="img_latex/10_01_02_LCM_continous_division_2_3_6.png" alt="Find LCM using continuous division for 2, 3 and 6" height="180">
     </div>
 </body>
 </html>

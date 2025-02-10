@@ -1,8 +1,11 @@
 \documentclass{article}
 \usepackage{forest}
+\usepackage{multicol}
+
 
 \begin{document}
 
+\begin{multicols}{3}
 \begin{center}
 \begin{forest}
   for tree={
@@ -24,6 +27,7 @@
   ]
 \end{forest}
 \end{center}
+\columnbreak
 
 \begin{center}
 \begin{forest}
@@ -46,6 +50,7 @@
   ]
 \end{forest}
 \end{center}
+\columnbreak
 
 \begin{center}
 \begin{forest}
@@ -70,5 +75,7 @@
 \end{forest}
 \end{center}
 
+\end{multicols}
+Therefore, any of the factor trees above can get: $72 = 2 \times 2 \times 2 \times 3$.
 \end{document}
 
