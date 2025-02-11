@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Math10 - 1.2 Greatest Common Factor and Least Common Multiple</title>
+    <style>
+        .responsive-img {
+            width: 50%;
+        }
+        .margin-from-left-solution {
+            margin-left: 20px;
+        }
+        body {
+            margin:4em; 
+            background-color: rgb(249, 249, 249);
+        }
+        #example-container {
+            background-color: rgb(236, 236, 236);
+            border:2px solid rgb(200, 200, 200);
+            padding: 1em;
+        }
+        #rule-container {
+            background-color: rgb(200, 200, 200);
+            border:2px solid rgb(180, 180, 180);
+            padding: 1em;
+        }
+    </style>
+        <!-- KaTeX CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+    
+        <!-- KaTeX JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js"></script>
+    
+        <script>
+            window.onload = function() {
+                renderMathInElement(document.body, {
+                    delimiters: [
+                        {left: "$$", right: "$$", display: true},
+                        {left: "\\[", right: "\\]", display: true},
+                        {left: "$", right: "$", display: false},
+                        {left: "\\(", right: "\\)", display: false}
+                    ]
+                });
+            };
+        </script>
+</head>
+<body>
+    <h1>Squares and Cubes</h1>
+
+
+    <div id="rule-container">
+        <h2>Squares and Square Roots:</h2>
+        <p>The $\textbf{square}$ of a number is the result of multiplying the number
+            by itself. To square any number $x$ means to raise the number to the
+            second power, i.e., $x^2 = x \times x$. E.g., $3^2 = 3 \times 3 = 9$.
+        </p>
+        <p>A $\textbf{square root}$ of a number $y$ is a number $x$ such that $x^2 = y$. In other words,
+            the number $x$'s square is $y$. 
+            Every positive number x has two square roots: $\sqrt{x}$, which is positive and called <i>the principal square root</i>,
+            or simply "<i>the square root</i>", and $-\sqrt{x}$, which is negative.
+            E.g., $4$ and $-4$ are square roots of 16 because $4^2 = (-4)^2 = 16$.
+            The symbol "$\sqrt{\phantom{x}}$" is called a radical sign.
+        </p>
+        <p>All numbers with square roots that are rational are called $\textbf{perfect squares}$, such as $0$, $4$, $\frac{4}{9}$.</p>
+    </div>
+
+    <br>
+
+    <div id="rule-container">
+        <h2>Cubes and Cube Roots:</h2>
+        <p></p>
+    </div>
+
+    <p>Prime factorization can be used to find square roots and cube roots.</p>
+    <br>
+
+    <div id="example-container">
+        <h2>Example 1:</h2>
+        <p class="margin-from-left-solution">Mercury, Venus, and Earth orbit the Sun approximately every 3, 7, and 12 months, respectively.
+            If the three planets are currently aligned, in how many months will they align again?
+        </p>
+        <hr>
+        <h3>Solution:</h3>
+        <div class="margin-from-left-solution">
+            <p>$3 = 3$</p>
+            <p>$7 = 7$</p>
+            <p>$12 = 2^2 \times 3$</p>
+            <p>The LCM of $3$, $7$, and $12$ is $2^2 \times 3 \times 7 = 84$. Therefore,
+                in $84$ months they will align again.</p>
+        </div>
+    </div>
+</body>
+</html>
