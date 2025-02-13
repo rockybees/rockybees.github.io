@@ -1,274 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exponent Rules Summary</title>
-
-    <!-- KaTeX CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
-    
-    <!-- KaTeX JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js"></script>
-
-    <script>
-        window.onload = function() {
-            renderMathInElement(document.body, {
-                delimiters: [
-                    {left: "$$", right: "$$", display: true},
-                    {left: "\\[", right: "\\]", display: true},
-                    {left: "$", right: "$", display: false},
-                    {left: "\\(", right: "\\)", display: false}
-                ]
-            });
-        };
-    </script>
-
+    <title>Math10 - 1.2 Greatest Common Factor and Least Common Multiple</title>
     <style>
+        .responsive-img {
+            width: 50%;
+        }
+        .margin-from-left-solution {
+            margin-left: 20px;
+        }
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            text-align: center;
+            margin:4em; 
+            background-color: rgb(249, 249, 249);
         }
-        table {
-            width: 80%;
-            margin: auto;
-            border-collapse: collapse;
+        #example-container {
+            background-color: rgb(236, 236, 236);
+            border:2px solid rgb(200, 200, 200);
+            padding: 1em;
         }
-        th, td {
-            border: 1px solid black;
-            padding: 10px;
-            text-align: center;
-        }
-        th {
-            background-color: #f2f2f2;
+        #rule-container {
+            background-color: rgb(200, 200, 200);
+            border:2px solid rgb(180, 180, 180);
+            padding: 1em;
         }
     </style>
+        <!-- KaTeX CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+    
+        <!-- KaTeX JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js"></script>
+    
+        <script>
+            window.onload = function() {
+                renderMathInElement(document.body, {
+                    delimiters: [
+                        {left: "$$", right: "$$", display: true},
+                        {left: "\\[", right: "\\]", display: true},
+                        {left: "$", right: "$", display: false},
+                        {left: "\\(", right: "\\)", display: false}
+                    ]
+                });
+            };
+        </script>
 </head>
 <body>
-    <h2>Exponent Rules Summary</h2>
-    <table>
-        <tr>
-            <th>Rule</th>
-            <th>Mathematical Form</th>
-        </tr>
-        <tr>
-            <td>Product Rule</td>
-            <td>\( a^m \times a^n = a^{m+n} \)</td>
-        </tr>
-        <tr>
-            <td>Quotient Rule</td>
-            <td>\( \frac{a^m}{a^n} = a^{m-n} \), $a \neq 0 $</td>
-        </tr>
-        <tr>
-            <td>Power Rule</td>
-            <td>\( (a^m)^n = a^{m \cdot n} \) <br/>
-                \( (ab)^m = a^m \times b^m \)
-            </td>
-        </tr>
-        <tr>
-            <td>Zero Exponent Rule</td>
-            <td>\( a^0 = 1 \)</td>
-        </tr>
-        <tr>
-            <td>Negative Exponent Rule</td>
-            <td>\( a^{-n} = \frac{1}{a^n} \)</td>
-        </tr>
-        <tr>
-            <td>Fractional Exponent Rule</td>
-            <td>\( a^{\frac{m}{n}} = \sqrt[n]{a^m} \)</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>$\mathbb W = \{ 0, 1, 2, \ldots \}$</td>
-        </tr>
-    </table>
-<!-- 
-    \colorbox{ResultColor}{\bbm
+    <h1>Exponential Notation</h1>
 
-        %\smallskip
-        
-        \centerline{\textbf{Interval Notation}}
-        
-        \medskip
-        
-        \hspace{.5in} Let $a$ and $b$ be real numbers with $a<b$.
-        
-        \smallskip
-        
-        \begin{center}
-        
-        \begin{tabular}{|c|c|c|} \hline
-        
-        Set of Real Numbers & Interval Notation &  Region on the Real Number Line  \\
-        \hline
-        
-         &  & \\
-        \shortstack{$\{x\,|\,a<x<b\}$ \\ \hfill}& \shortstack{$(a,b)$ \\ \hfill} & 
-        
-        \begin{mfpic}[10]{-3}{3}{-2}{2} 
-        \backgroundcolor[gray]{.95}
-        
-        \tlpointsep{4pt}
-        \axislabels {x}{{$a\vphantom{b} \hspace{4pt} $} -3, {$b$} 3}
-        
-        \polyline{(-3,0), (3,0)}
-        \pointfillfalse
-        \point[3pt]{(3,0), (-3,0)}
-        
-        \end{mfpic}  \\ \hline
-        
-        & &  \\
-        \shortstack{$\{x\,|\,a\leq x<b\}$ \\ \hfill}& \shortstack{$[a,b)$ \\ \hfill} & 
-        
-        \begin{mfpic}[10]{-3}{3}{-2}{2} 
-        \backgroundcolor[gray]{.95}
-        
-        \tlpointsep{4pt}
-        \axislabels {x}{{$a\vphantom{b} \hspace{4pt} $} -3, {$b$} 3}
-        
-        \polyline{(-3,0), (3,0)}
-        \point[3pt]{(-3,0)}
-        \pointfillfalse
-        \point[3pt]{(3,0)}
-        
-        \end{mfpic}   \\
-        \hline
-        
-         &  & \\
-        \shortstack{$\{x\,|\,a<x\leq b\}$ \\ \hfill}&\shortstack{$(a,b]$ \\ \hfill} & 
-        
-        \begin{mfpic}[10]{-3}{3}{-2}{2} 
-        \backgroundcolor[gray]{.95}
-        
-        \tlpointsep{4pt}
-        \axislabels {x}{{$a\vphantom{b} \hspace{4pt} $} -3, {$b$} 3}
-        
-        \polyline{(-3,0), (3,0)}
-        \point[3pt]{(3,0)}
-        \pointfillfalse
-        \point[3pt]{(-3,0)}
-        
-        \end{mfpic}   \\
-        \hline
-        
-         &  & \\
-        \shortstack{$\{x\,|\,a\leq x \leq b\}$ \\ \hfill}& \shortstack{$[a,b]$ \\ \hfill}& 
-        
-        \begin{mfpic}[10]{-3}{3}{-2}{2} 
-        \backgroundcolor[gray]{.95}
-        
-        \tlpointsep{4pt}
-        \axislabels {x}{{$a\vphantom{b} \hspace{4pt} $} -3, {$b$} 3}
-        
-        \polyline{(-3,0), (3,0)}
-        \point[3pt]{(3,0), (-3,0)}
-        
-        \end{mfpic}   \\
-        \hline
-        
-         & & \\
-        \shortstack{$\{x\,| \, x<b\}$ \\ \hfill}& \shortstack{$(-\infty,b)$ \\ \hfill}& 
-        
-        \begin{mfpic}[10]{-3}{3}{-2}{2} 
-        \backgroundcolor[gray]{.95}
-        
-        \tlpointsep{4pt}
-        \axislabels {x}{{$b$} 3}
-        
-        \arrow \polyline{(3,0), (-3,0)}
-        
-        \pointfillfalse
-        \point[3pt]{(3,0)}
-        
-        \end{mfpic}   \\
-        \hline
-        
-        
-        &  & \\
-        
-        \shortstack{$\{x\,| \, x \leq b\}$ \\ \hfill} & \shortstack{$(-\infty,b]$ \\ \hfill}& 
-        
-        \begin{mfpic}[10]{-3}{3}{-2}{2} 
-        \backgroundcolor[gray]{.95}
-        
-        \tlpointsep{4pt}
-        \axislabels {x}{{$b$} 3}
-        
-        \arrow \polyline{(3,0), (-3,0)}
-        
-        \point[3pt]{(3,0)}
-        
-        \end{mfpic}   \\
-        \hline
-        
-         &  & \\
-        \shortstack{$\{x\,| \, x>a\}$ \\ \hfill}& \shortstack{$(a,\infty)$ \\ \hfill}& 
-        
-        \begin{mfpic}[10]{-3}{3}{-2}{2} 
-        \backgroundcolor[gray]{.95}
-        
-        \tlpointsep{4pt}
-        \axislabels {x}{{$a\vphantom{b} \hspace{4pt}$} -3}
-        
-        \arrow \polyline{(-3,0), (3,0)}
-        
-        \pointfillfalse
-        \point[3pt]{(-3,0)}
-        
-        \end{mfpic}   \\
-        \hline
-        
-         &  & \\
-        \shortstack{$\{x\,| \, x \geq a \}$ \\ \hfill}& \shortstack{$[a,\infty)$ \\ \hfill} & 
-        
-        \begin{mfpic}[10]{-3}{3}{-2}{2} 
-        \backgroundcolor[gray]{.95}
-        
-        \tlpointsep{4pt}
-        \axislabels {x}{{$a\vphantom{b} \hspace{4pt}$} -3}
-        
-        \arrow \polyline{(-3,0), (3,0)}
-        
-        \point[3pt]{(-3,0)}
-        
-        \end{mfpic}   \\
-        \hline
-        
-        &  & \\
-        \shortstack{$\mathbb R$ \\ \hfill}& \shortstack{$(-\infty,\infty)$ \\ \hfill} & 
-        
-        \begin{mfpic}[10]{-3}{3}{-2}{2} 
-        \backgroundcolor[gray]{.95}
-        
-        \tlpointsep{4pt}
-        \axislabels {x}{{$\vphantom{b} \hspace{4pt}$} -3}
-        
-        \arrow \reverse \arrow \polyline{(-3,0), (3,0)}
-        
-        \end{mfpic}   \\
-        \hline
-        
-        \end{tabular}
-        
-        \end{center}
-        
-        \ebm} -->
-        
+    <p>An $\textbf{exponent}$ indicates how many times the base is used as a factor.</p>
+    <p>$3^4 = 3 \times 3 \times 3 \times 3$ can be read "three to the power of four", or "three to the fourth power".</p>
+    <div id="rule-container">
+        <h2>Exponents of $0$:</h2>
+        <p>$a^0 = 1$, for any $a \neq 0$.</p>
+        <p>Note: $0^0$ is undefined or indeterminate because different mathematical contexts suggest different values.</p>
+        <p>If we apply the above exponent rule to $0$, it would suggest $0^0 = 1$.</p> 
+        <p>However, if we extend the exponent rule $0^n = 0$ (for any $n>0$) to $n = 0$, it would imply $0^0 = 0$, which contradicts the first rule.</p>
+    </div>
 
-    <script>
-        renderMathInElement(
-            document.body,
-            {
-                delimiters: [
-                    {left: "$$", right: "$$", display: true},
-                    {left: "\\[", right: "\\]", display: true},
-                    {left: "$", right: "$", display: false},
-                    {left: "\\(", right: "\\)", display: false}
-                ]
-            }
-        );
-    </script>
+    <br>
+
+    <div id="example-container">
+        <h2>Example 1:</h2>
+        <p class="margin-from-left-solution">Find the positive square root of 144.</p>
+        <hr>
+        <h3>Solution:</h3>
+        <div class="margin-from-left-solution">
+            <p>$144 = 2 \times 2 \times 2 \times 2 \times 3 \times 3$,</p>
+            <p>Therefore, $\sqrt{144} = 2 \times 2 \times 3 = 12$.</p>
+        </div>
+    </div>
+
+    <br>
+
+
+    </div>
+
+    <br>
+    <div id="rule-container">
+        <h2>Mixed Root and Entire Root:</h2>
+        <p>An expression such as $3\sqrt{2}$ is called $\textbf{mixed root}$, and the expression $\sqrt{18}$, which equals $3\sqrt{2}$, is called an entire root.
+        </p>
+        <p>Any mixed root can be converted into an entire root. E.g., $3\sqrt[3]{2} = \sqrt[3]{54}$</p>
+    </div>
 </body>
 </html>
