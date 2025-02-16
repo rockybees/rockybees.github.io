@@ -1,17 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Math10 - 1.2 Greatest Common Factor and Least Common Multiple</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math10 - 1.5 Exponent Rules Summary</title>
     <style>
         .responsive-img {
             width: 50%;
         }
         .margin-from-left-solution {
             margin-left: 20px;
-        }
-        body {
-            margin:4em; 
-            background-color: rgb(249, 249, 249);
         }
         #example-container {
             background-color: rgb(236, 236, 236);
@@ -23,26 +21,48 @@
             border:2px solid rgb(180, 180, 180);
             padding: 1em;
         }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            margin:4em; 
+            background-color: rgb(249, 249, 249);
+        }
+        table {
+            width: 80%;
+            text-align: center;
+            margin: auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
     </style>
-        <!-- KaTeX CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+    <!-- KaTeX CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
     
-        <!-- KaTeX JS -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js"></script>
-    
-        <script>
-            window.onload = function() {
-                renderMathInElement(document.body, {
-                    delimiters: [
-                        {left: "$$", right: "$$", display: true},
-                        {left: "\\[", right: "\\]", display: true},
-                        {left: "$", right: "$", display: false},
-                        {left: "\\(", right: "\\)", display: false}
-                    ]
-                });
-            };
-        </script>
+    <!-- KaTeX JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js"></script>
+
+    <script>
+        window.onload = function() {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "\\[", right: "\\]", display: true},
+                    {left: "$", right: "$", display: false},
+                    {left: "\\(", right: "\\)", display: false}
+                ]
+            });
+        };
+    </script>
+
 </head>
 <body>
     <h1>Exponential Notation</h1>
@@ -72,50 +92,226 @@
 
     <br>
 
-    <div id="rule-container">
     <h2>Exponent Rules Summary</h2>
     <table>
         <tr>
             <th>Rule</th>
-            <th>Expression</th>
-            <th>Example</th>
+            <th>Mathematical Form</th>
         </tr>
         <tr>
             <td>Product Rule</td>
-            <td>$a^m \times a^n = a^{(m+n)}$</td>
+            <td>\( a^m \times a^n = a^{m+n} \)</td>
         </tr>
         <tr>
             <td>Quotient Rule</td>
-            <td>$a^m \div a^n = a^{(m-n)}$</td>
+            <td>\( \frac{a^m}{a^n} = a^{m-n} \)</td>
         </tr>
         <tr>
             <td>Power Rule</td>
-            <td>$(a^m)^n = a^{(m \times n)}$</td>
+            <td>\( (a^m)^n = a^{m \times n} \)</td>
         </tr>
         <tr>
             <td>Zero Exponent Rule</td>
-            <td><code>a^0 = 1</code> (for a ≠ 0)</td>
-            <td><code>7^0 = 1</code></td>
+            <td>\( a^0 = 1 \)</td>
         </tr>
         <tr>
             <td>Negative Exponent Rule</td>
-            <td><code>a^(-n) = 1 / a^n</code></td>
-            <td><code>4^(-2) = 1/4^2 = 1/16</code></td>
+            <td>\( a^{-n} = \frac{1}{a^n} \)</td>
         </tr>
         <tr>
             <td>Fractional Exponent Rule</td>
-            <td><code>a^(m/n) = n√(a^m)</code></td>
-            <td><code>8^(1/3) = ³√8 = 2</code></td>
+            <td>\( a^{\frac{m}{n}} = \sqrt[n]{a^m} \)</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>$\mathbb W = \{ 0, 1, 2, \ldots \}$</td>
         </tr>
     </table>
-    </div>
+<!-- 
+    \colorbox{ResultColor}{\bbm
 
-    <br>
-    <div id="rule-container">
-        <h2>Mixed Root and Entire Root:</h2>
-        <p>An expression such as $3\sqrt{2}$ is called $\textbf{mixed root}$, and the expression $\sqrt{18}$, which equals $3\sqrt{2}$, is called an entire root.
-        </p>
-        <p>Any mixed root can be converted into an entire root. E.g., $3\sqrt[3]{2} = \sqrt[3]{54}$</p>
-    </div>
+        %\smallskip
+        
+        \centerline{\textbf{Interval Notation}}
+        
+        \medskip
+        
+        \hspace{.5in} Let $a$ and $b$ be real numbers with $a<b$.
+        
+        \smallskip
+        
+        \begin{center}
+        
+        \begin{tabular}{|c|c|c|} \hline
+        
+        Set of Real Numbers & Interval Notation &  Region on the Real Number Line  \\
+        \hline
+        
+         &  & \\
+        \shortstack{$\{x\,|\,a<x<b\}$ \\ \hfill}& \shortstack{$(a,b)$ \\ \hfill} & 
+        
+        \begin{mfpic}[10]{-3}{3}{-2}{2} 
+        \backgroundcolor[gray]{.95}
+        
+        \tlpointsep{4pt}
+        \axislabels {x}{{$a\vphantom{b} \hspace{4pt} $} -3, {$b$} 3}
+        
+        \polyline{(-3,0), (3,0)}
+        \pointfillfalse
+        \point[3pt]{(3,0), (-3,0)}
+        
+        \end{mfpic}  \\ \hline
+        
+        & &  \\
+        \shortstack{$\{x\,|\,a\leq x<b\}$ \\ \hfill}& \shortstack{$[a,b)$ \\ \hfill} & 
+        
+        \begin{mfpic}[10]{-3}{3}{-2}{2} 
+        \backgroundcolor[gray]{.95}
+        
+        \tlpointsep{4pt}
+        \axislabels {x}{{$a\vphantom{b} \hspace{4pt} $} -3, {$b$} 3}
+        
+        \polyline{(-3,0), (3,0)}
+        \point[3pt]{(-3,0)}
+        \pointfillfalse
+        \point[3pt]{(3,0)}
+        
+        \end{mfpic}   \\
+        \hline
+        
+         &  & \\
+        \shortstack{$\{x\,|\,a<x\leq b\}$ \\ \hfill}&\shortstack{$(a,b]$ \\ \hfill} & 
+        
+        \begin{mfpic}[10]{-3}{3}{-2}{2} 
+        \backgroundcolor[gray]{.95}
+        
+        \tlpointsep{4pt}
+        \axislabels {x}{{$a\vphantom{b} \hspace{4pt} $} -3, {$b$} 3}
+        
+        \polyline{(-3,0), (3,0)}
+        \point[3pt]{(3,0)}
+        \pointfillfalse
+        \point[3pt]{(-3,0)}
+        
+        \end{mfpic}   \\
+        \hline
+        
+         &  & \\
+        \shortstack{$\{x\,|\,a\leq x \leq b\}$ \\ \hfill}& \shortstack{$[a,b]$ \\ \hfill}& 
+        
+        \begin{mfpic}[10]{-3}{3}{-2}{2} 
+        \backgroundcolor[gray]{.95}
+        
+        \tlpointsep{4pt}
+        \axislabels {x}{{$a\vphantom{b} \hspace{4pt} $} -3, {$b$} 3}
+        
+        \polyline{(-3,0), (3,0)}
+        \point[3pt]{(3,0), (-3,0)}
+        
+        \end{mfpic}   \\
+        \hline
+        
+         & & \\
+        \shortstack{$\{x\,| \, x<b\}$ \\ \hfill}& \shortstack{$(-\infty,b)$ \\ \hfill}& 
+        
+        \begin{mfpic}[10]{-3}{3}{-2}{2} 
+        \backgroundcolor[gray]{.95}
+        
+        \tlpointsep{4pt}
+        \axislabels {x}{{$b$} 3}
+        
+        \arrow \polyline{(3,0), (-3,0)}
+        
+        \pointfillfalse
+        \point[3pt]{(3,0)}
+        
+        \end{mfpic}   \\
+        \hline
+        
+        
+        &  & \\
+        
+        \shortstack{$\{x\,| \, x \leq b\}$ \\ \hfill} & \shortstack{$(-\infty,b]$ \\ \hfill}& 
+        
+        \begin{mfpic}[10]{-3}{3}{-2}{2} 
+        \backgroundcolor[gray]{.95}
+        
+        \tlpointsep{4pt}
+        \axislabels {x}{{$b$} 3}
+        
+        \arrow \polyline{(3,0), (-3,0)}
+        
+        \point[3pt]{(3,0)}
+        
+        \end{mfpic}   \\
+        \hline
+        
+         &  & \\
+        \shortstack{$\{x\,| \, x>a\}$ \\ \hfill}& \shortstack{$(a,\infty)$ \\ \hfill}& 
+        
+        \begin{mfpic}[10]{-3}{3}{-2}{2} 
+        \backgroundcolor[gray]{.95}
+        
+        \tlpointsep{4pt}
+        \axislabels {x}{{$a\vphantom{b} \hspace{4pt}$} -3}
+        
+        \arrow \polyline{(-3,0), (3,0)}
+        
+        \pointfillfalse
+        \point[3pt]{(-3,0)}
+        
+        \end{mfpic}   \\
+        \hline
+        
+         &  & \\
+        \shortstack{$\{x\,| \, x \geq a \}$ \\ \hfill}& \shortstack{$[a,\infty)$ \\ \hfill} & 
+        
+        \begin{mfpic}[10]{-3}{3}{-2}{2} 
+        \backgroundcolor[gray]{.95}
+        
+        \tlpointsep{4pt}
+        \axislabels {x}{{$a\vphantom{b} \hspace{4pt}$} -3}
+        
+        \arrow \polyline{(-3,0), (3,0)}
+        
+        \point[3pt]{(-3,0)}
+        
+        \end{mfpic}   \\
+        \hline
+        
+        &  & \\
+        \shortstack{$\mathbb R$ \\ \hfill}& \shortstack{$(-\infty,\infty)$ \\ \hfill} & 
+        
+        \begin{mfpic}[10]{-3}{3}{-2}{2} 
+        \backgroundcolor[gray]{.95}
+        
+        \tlpointsep{4pt}
+        \axislabels {x}{{$\vphantom{b} \hspace{4pt}$} -3}
+        
+        \arrow \reverse \arrow \polyline{(-3,0), (3,0)}
+        
+        \end{mfpic}   \\
+        \hline
+        
+        \end{tabular}
+        
+        \end{center}
+        
+        \ebm} -->
+        
+
+    <script>
+        renderMathInElement(
+            document.body,
+            {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "\\[", right: "\\]", display: true},
+                    {left: "$", right: "$", display: false},
+                    {left: "\\(", right: "\\)", display: false}
+                ]
+            }
+        );
+    </script>
 </body>
 </html>
