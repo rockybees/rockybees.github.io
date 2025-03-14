@@ -79,56 +79,82 @@
         <li>The $\textbf{degree}$ of a $\textbf{polynomial}$ is the highest degree among its terms, i.e., the degree of the leading term.</li>
 
     </ul>
-    <div>
-        <table>
-            <tr>
-                <th>Exponent Rules Summary</th>
-                <th>Mathematical Form</th>
-            </tr>
-            <tr>
-                <td>Product Rule</td>
-                <td>\( a^m \times a^n = a^{m+n} \)</td>
-            </tr>
-            <tr>
-                <td>Quotient Rule</td>
-                <td>\( \frac{a^m}{a^n} = a^{m-n}, a \neq 0 \)</td>
-            </tr>
-            <tr>
-                <td>Power Rule</td>
-                <td>\( (a^m)^n = a^{m \times n} \)</td>
-            </tr>
-            <tr>
-                <td>Zero Exponent Rule</td>
-                <td>$ a^0 = \frac{a^m}{a^m} = 1$, for any $a \neq 0$</td>
-            </tr>
-            <tr>
-                <td>Negative Exponent Rule</td>
-                <td>\( a^{-n} = \frac{1}{a^n} \)</td>
-            </tr>
-            <tr>
-                <td>Fractional Exponent Rule</td>
-                <td>$ a^{\frac{m}{n}} = \sqrt[n]{a^m} $</td>
-            </tr>
-        </table>
-        </div>
+    <div id="example-container">
+        <p>In the expression $4x^2 + 2x^3y^2 - 3x^2 + 5xy^2 - 10$,</p>
+        <div>
+            <table>
+                <tr>
+                    <td>Terms</th>
+                    <td>$4x^2, 2x^3y^2, - 3x^2, 5xy^2, -10$</th>
+                </tr>
+                <tr>
+                    <td>Coefficients</td>
+                    <td>$4, 2, -3, 5, -10$</td>
+                </tr>
+                <tr>
+                    <td>Degree of each term</td>
+                    <td>$2, 5, 2, 3, 0$</td>
+                </tr>
+                <tr>
+                    <td>Leading term</td>
+                    <td>$2x^3y^2$</td>
+                </tr>
+                <tr>
+                    <td>Like terms</td>
+                    <td>$4x^2, -3x^2$</td>
+                </tr>
+                <tr>
+                    <td>Degree of the polynomial</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Simplify the expression</td>
+                    <td>$2x^3y^2 + 5xy^2 + x^2 - 10$</td>
+                </tr>
+            </table>
+            </div>
+    </div>
+
 
         <br>
 
-    <div class="rule-container">
+    <!-- <div class="rule-container">
         <p>Note: For exponents of $0$, $0^0$ is undefined or indeterminate because different mathematical contexts suggest different values.</p>
         <p>If we apply the above exponent rule to $0$, it would suggest $0^0 = 1$.</p> 
         <p>However, if we extend the exponent rule $0^n = 0$ (for any $n>0$) to $n = 0$, it would imply $0^0 = 0$, which contradicts the first rule.</p>
-    </div>
+    </div> -->
+    <h2>Evaluating Polynomials</h2>
+    <p>Evaluating a polynomial means to substitute a given numerical value for the variable(s) in the polynomial and 
+        computing the resulting value. For example, when evaluating $3x - 1$ at $x = 2$, we substitute $2$ for $x$, and compute $3 \times 2 - 1 = 5$. 
+    </p>
+    <h2>Multiplying Polynomials</h2>
+    <p>
+        Multiplying polynomials involves distributing each term of one polynomial to 
+        every term of the other polynomial and then combining like terms. The process
+        follows the distributive property: $(a + b)(c + d) = a(c+d) + b(c + d) = ac + ad + bc + bd$.
+        <br>For example, $(2x^2 -3x + 1)(x - 5) = 2x^3 - 10x^2 - 3x^2 + 15x + x - 5 = 2x^3 - 13x^2 + 16x - 5$.
+    </p>
+    <h3>Commonly Used Formulas</h3>
+    <ul>
+        <li>Square of a binomial: $(a + b)^2 = a^2 + 2ab + b^2$, $(a - b)^2 = a^2 - 2ab + b^2$.</li>
+        <li>Cube of a binomial: $(a + b)^3 = a^3 + 3a^2b + 3ab^2 + b^3$, $(a - b)^3 = a^3 - 3a^2b + 3ab^2 - b^3$.</li>
+        <li>Product of sum and difference: $(a + b)(a - b) = a^2 - b^2$.</li>
+    </ul>
 
     <br>
 
     <div id="example-container">
         <h2>Example:</h2>
-        <p class="margin-from-left-solution">Simplify $\sqrt[4]{16^2}$</p>
+        <p class="margin-from-left-solution">Rose is using her rubber band of $20cm$ to make a rectangular shape. What is the biggest area she can make?</p>
         <hr>
         <h3>Solution:</h3>
         <div class="margin-from-left-solution">
-            <p>$\sqrt[4]{16^2} = \sqrt[4]{((2)^4)^2} = \sqrt[4]{2^8} = 2^(8/4) = 2^2 = 4$</p>
+            <p>Let the length of the rectangular be $x$. Then, the width is $10 - x$.
+            <br>The area $A$ can be expressed as:
+            <br>$A = x(10 - x) = -(x^2 -10x) = -(x - 5)^2 + 25$.
+            <br>Thus, the maximum area Rose can make with her $20cm$ rubber band is $25cm^2$.
+            This occurs when the rectangle is a square, with each side measuring $5cm$.  
+            </p>
         </div>
     </div>
 
