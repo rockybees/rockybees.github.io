@@ -173,7 +173,7 @@
             <br>sum and difference of cubes: $a^3 + b^3 = (a + b)(a^2 - ab + b^2)$, $a^3 - b^3 = (a - b)(a^2 + ab + b^2)$.</li>
     </ul>
 
-    <p>Note: Factoring polynomials of the type $x^2 + bx + c = (x + m)(x + n)$, find two factors $m$, $n$ of $c$, such that $m + n = b$, 
+    <p>Factoring polynomials of the type $x^2 + bx + c = (x + m)(x + n)$, find two factors $m$, $n$ of $c$, such that $m + n = b$, 
         such as $x^2 - x - 12 = (x - 4)(x + 3)$.
         <br> Factoring polynomials of the type $ax^2 + bx + c$, it's often not as obvious as the type $x^2 + bx + c$, we can use the following methods:
         <br>
@@ -188,9 +188,17 @@
             <li>
                 Quadratic formula: use $x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$. For $2x^2 + 7x - 4$, we get $x = \frac{-7 \pm 9}{4} = -4, 1/2$.
             </li>
-            <li>AC method: find two numbers that multiply to ac and add to b. Divide both numbers by a. If any fraction remains, 
-                move its denominator to be the coefficient of $x$ in that binomial. For $2x^2 + 7x - 4$, we can find $8$, $-1$, such that $8 \times -1 = 2 \times -4$, $8 - 1 = 7$.
-                Divide them by $2$, we have $4$, $-\frac{1}{2}$. Write the factors: $(x + 4)(x - \frac{1}{2})$. Move the denominator $2$ to be the coefficient of $x$, we have $(x + 4)(2x - 1)$ as the factored form.</li>
+            <li>AC method: find two numbers that multiply to $ac$ and add to $b$. Rewrite the middle term and factor by grouping.
+                <ul>
+                    <li>Factor $15x^2 + 11x + 2$</li>
+                    <li>Find factors of $ac=30$ whose sum is $11$, that is $6$ and $5$</li>
+                    <li>Rewrite $15x^2 + 11x + 2 = 15x^2 + 6x + 5x + 2$ (Or: $= 15x^2 + 5x + 6x + 2$)</li>
+                    <li>Factor by grouping: = $(15x^2 + 6x) + (5x + 2) = 3x(5x + 2) + (5x+2)=(3x+1)(5x+2)$</li>
+                </ul>
+                <p>$\textbf{AC method proof}$: Given a factorable trinomial of the form: $ax^2 + bx + c$, which can be factored as $(mx+p)(nx+q)$.</p>
+                <p>Expanding the right-hand side: $ax^2 + bx + c = (mx+p)(nx+q) = mnx^2 + (mq+np)x + pq$, we can see that $mqnp = ac$, $mq + np = b$.</p> 
+                <p>Thus, using the factors of $ac$ whose sum is $b$ allows us to factor the factorable trinomial.</p>
+            </li>
         </ol>
 
     </p>
