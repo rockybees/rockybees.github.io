@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Guess the Number</title>
+  <link rel="stylesheet" href="game_guess_styles.css" />
+
+</head>
+<body>
+
+    <div class="container">
+      <h1>Guess the Number</h1>
+      <p>I'm thinking of an integer between 1 and 100.</p>
+      <input type="number" id="guess" placeholder="Enter your guess" />
+      <button id="submitGuess">Submit Guess</button>
+      <p id="result"></p>
+      <p id="attempts">Attempts: 0</p>
+      <button id="playAgain" style="display:none;">Play Again</button>
+    </div>
+
+      <!-- Slides Link Section -->
+      <div class="slides-link">
+        <a href="binary_search_slides.pdf" target="_blank">Today's Slides</a>
+      </div>
+
+  <script src="game_guess_script.js"></script>
+</body>
+</html>
